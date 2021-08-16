@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fi</string>
+    <string name="logo_labe">S.</string>
+    <string name="header">First of the few steps to set you up with a Bank Account</string>
+    <string name="pan_number">PAN NUMBER</string>
+    <string name="birthdate">BIRTHDATE</string>
+    <string name="dd">dd</string>
+    <string name="mm">mm</string>
+    <string name="yyyy">yyyy</string>
+    <string name="i_don_t_have_a_pan">I don\'t have a PAN</string>
+    <string name="next">NEXT</string>
+    <string name="providing_pan_amp_date_of_birth_helps_us_find_and_fetch_your_kyc_from_a_central_registry_by_the_government_of_india_learn_more"><![CDATA[Providing PAN & Date of Birth helps us find and fetch your KYC from a central registry by the Government of India. Learn more]]></string>
+</resources>

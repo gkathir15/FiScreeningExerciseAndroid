@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logo_labe"
+        android:textSize="36sp"
+        android:fontFamily="@font/roboto_black"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/header"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/panTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_title"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/pan_number" />
+
+    <EditText
+        android:id="@+id/panNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panTitle"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/pan_et_bg"
+        android:inputType="textCapCharacters" />
+
+    <TextView
+        android:id="@+id/bdateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panNo"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/birthdate" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/bdateTitle"
+    android:weightSum="10"
+    android:orientation="horizontal">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/dd"
+        android:background="@drawable/et_bg"
+        android:layout_weight="2"
+        android:textAlignment="center"
+        android:inputType="date"
+        android:maxLength="2"
+        android:layout_marginHorizontal="12dp"
+        android:id="@+id/dateEt" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/monthEt"
+        android:background="@drawable/et_bg"
+        android:layout_weight="2"
+        android:layout_marginHorizontal="12dp"
+        android:textAlignment="center"
+        android:inputType="date"
+        android:maxLength="2"
+        android:hint="@string/mm"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yearEt"
+        android:background="@drawable/et_bg"
+        android:layout_weight="6"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="12dp"
+        android:inputType="date"
+        android:maxLength="4"
+        android:hint="@string/yyyy"/>
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/next"
+        android:id="@+id/info"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/providing_pan_amp_date_of_birth_helps_us_find_and_fetch_your_kyc_from_a_central_registry_by_the_government_of_india_learn_more" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/dntHavPan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="36dp"
+        android:background="@color/button"
+        android:text="@string/next"
+        android:enabled="false"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/dntHavPan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="12sp"
+        android:text="@string/i_don_t_have_a_pan"
+        android:textColor="@color/button"
+        android:textSize="16sp" />
+
+
+
+</RelativeLayout>
